@@ -27,7 +27,6 @@ namespace AdaptiveClient.ConsoleDemo
 
         private User GetAUser(int id)
         {
-            
             User user = client.Try(x => x.GetUserByID(id));
             Console.WriteLine($"User {user.Name} was found.  EndPoint used was {client.CurrentEndPoint.Name}.");
             return user;
