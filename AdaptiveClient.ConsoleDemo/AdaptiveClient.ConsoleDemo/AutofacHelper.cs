@@ -54,7 +54,7 @@ namespace AdaptiveClient.ConsoleDemo
 
         private static IEnumerable<IEndPointConfiguration> ReadEndPoints()
         {
-            string filePath = Path.Combine(Directory.GetParent(AppContext.BaseDirectory).Parent.Parent.FullName, "EndPoints.json");
+            string filePath = Path.Combine(Directory.GetParent(AppContext.BaseDirectory).Parent.Parent.Parent.FullName, "EndPoints.json");
             JObject obj = JsonConvert.DeserializeObject(File.ReadAllText(filePath)) as JObject;
             return obj["EndPointConfigurations"].ToObject<List<EndPointConfiguration>>();
         }
