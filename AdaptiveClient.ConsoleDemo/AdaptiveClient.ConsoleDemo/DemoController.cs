@@ -21,9 +21,10 @@ namespace AdaptiveClient.ConsoleDemo
         public void Run() // In a real app this method might be called by a Get or Post
         {
             // Make some calls to UsersService which we have mocked up to simulate a service that reads/writes to a database.
-            // Two calls are made to this method:  
-            // On the first call we simply show we can make calls to our service.
-            // On the second call we simulate a failure and we fall back to a mocked WebAPI client.
+            // Three calls are made to this method:  
+            // First call we show we can make calls to a service that reads/writes a MSSQL database.
+            // Second call we show we can make calls to a service that reads/writes a MySQL database.
+            // Third call we simulate a failure and we fall back to a mocked WebAPI client.
 
             User user = client.Try(usersService => usersService.GetUserByID(1));  // An error here is expected on the second call as we are simulating an error connecting to a server.  Click "Continue" in Visual Studio IDE.
             Console.WriteLine($"User {user.Name} was found.  EndPoint used was {client.CurrentEndPoint.Name}.");
