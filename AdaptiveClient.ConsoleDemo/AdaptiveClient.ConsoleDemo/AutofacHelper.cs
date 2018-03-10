@@ -11,33 +11,32 @@ using LeaderAnalytics.AdaptiveClient;
 
 namespace AdaptiveClient.ConsoleDemo
 {
+    public static class DataProvider
+    {
+        public static string MSSQL = "MSSQL";
+        public static string MySQL = "MySQL";
+        //public static string Oracle = "Oracle";
+    }
+
+    public enum API_Name
+    {
+        UsersAPI
+        // ,YourAPIName
+    }
+
+
+    public static class EndPointType
+    {
+        public const string InProcess = "InProcess";
+        public const string HTTP = "HTTP";
+        public const string WCF = "WCF";
+        public const string ESB = "ESB";
+        public const string File = "File";
+        public const string FTP = "FTP";
+    }
+
     public class AutofacHelper
     {
-        
-        public static class DataProvider
-        {
-            public static string MSSQL = "MSSQL";
-            public static string MySQL = "MySQL";
-            //public static string Oracle = "Oracle";
-        }
-
-        public enum API_Name
-        {
-            UsersAPI
-            // ,YourAPIName
-        }
-
-
-        public static class EndPointType
-        {
-            public const string InProcess = "InProcess";
-            public const string HTTP = "HTTP";
-            public const string WCF = "WCF";
-            public const string ESB = "ESB";
-            public const string File = "File";
-            public const string FTP = "FTP";
-        }
-
 
         public static void RegisterComponents(ContainerBuilder builder)
         {
