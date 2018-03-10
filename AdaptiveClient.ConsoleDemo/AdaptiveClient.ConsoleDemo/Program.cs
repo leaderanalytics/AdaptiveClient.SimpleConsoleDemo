@@ -31,7 +31,7 @@ namespace AdaptiveClient.ConsoleDemo
 
             using (var scope = new ContainerBuilder().Build().BeginLifetimeScope(builder => AutofacHelper.RegisterComponents(builder)))
             {
-                DemoController demo = scope.Resolve<DemoController>();
+                Demo demo = scope.Resolve<Demo>();
                 demo.Run();
             }
 
@@ -48,7 +48,7 @@ namespace AdaptiveClient.ConsoleDemo
 
             using (var scope = new ContainerBuilder().Build().BeginLifetimeScope(builder => AutofacHelper.RegisterMySQLMocks(builder)))
             {
-                DemoController demo = scope.Resolve<DemoController>();
+                Demo demo = scope.Resolve<Demo>();
                 demo.Run();
             }
 
@@ -64,7 +64,7 @@ namespace AdaptiveClient.ConsoleDemo
 
             using (var scope = new ContainerBuilder().Build().BeginLifetimeScope(builder => AutofacHelper.RegisterFallbackMocks(builder)))
             {
-                DemoController demo = scope.Resolve<DemoController>();
+                Demo demo = scope.Resolve<Demo>();
                 demo.Run();
             }
 
