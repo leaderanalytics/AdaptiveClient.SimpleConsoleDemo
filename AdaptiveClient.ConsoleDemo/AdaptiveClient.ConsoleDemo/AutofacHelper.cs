@@ -89,7 +89,7 @@ namespace AdaptiveClient.ConsoleDemo
             var usersServiceMock = new Mock<IUsersService>();
             usersServiceMock.Setup(x => x.SaveUser(It.IsAny<User>())).Throws(new Exception("Cant find database server."));
             usersServiceMock.Setup(x => x.GetUserByID(It.IsAny<int>())).Throws(new Exception("Cant find database server."));
-            builder.RegisterInstance(usersServiceMock.Object).Keyed<IUsersService>(EndPointType.InProcess);
+            builder.RegisterInstance(usersServiceMock.Object).Keyed<IUsersService>(EndPointType.InProcess+DataProvider.MSSQL);
             registrationHelper.RegisterLogger(x => Console.WriteLine(x));
             builder.RegisterType<DemoController>();
         }
