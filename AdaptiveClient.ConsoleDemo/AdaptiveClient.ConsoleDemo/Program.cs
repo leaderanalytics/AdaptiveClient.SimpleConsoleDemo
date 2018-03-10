@@ -37,7 +37,9 @@ namespace AdaptiveClient.ConsoleDemo
             Console.WriteLine();
             Console.WriteLine("Simulating failure to connect to SQL box on local area network.");
             Console.WriteLine("An error message will be shown and AdaptiveClient will fall back to the WebAPI server.");
-            Console.WriteLine();
+            Console.WriteLine("Visual Studio may break with an exception. This is expected - just click Continue.");
+            Console.WriteLine("Press any key...");
+            Console.ReadKey();
 
             using (var scope = new ContainerBuilder().Build().BeginLifetimeScope(builder => AutofacHelper.RegisterMocks(builder)))
             {
@@ -48,7 +50,7 @@ namespace AdaptiveClient.ConsoleDemo
             Console.WriteLine();
             Console.WriteLine("AdaptiveClient Demo Complete");
             Console.WriteLine("Press any key...");
-            Console.Read();
+            Console.ReadKey();
         }
 
         

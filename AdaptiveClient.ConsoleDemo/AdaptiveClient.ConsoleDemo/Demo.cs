@@ -5,7 +5,10 @@ using LeaderAnalytics.AdaptiveClient;
 
 namespace AdaptiveClient.ConsoleDemo
 {
-
+    // In a real application this Demo class would most likely be a Controller or a ViewModel.
+    // Here we inject a single service, UsersService, as is shown in the constructor below.
+    // However we can also inject a facade or manifest that will give us easy access to hundreds of services.
+    // 
     public class Demo
     {
         private IAdaptiveClient<IUsersService> client;
@@ -17,24 +20,15 @@ namespace AdaptiveClient.ConsoleDemo
 
         public void Run()
         {
-            // Simulate making some service calls.
-            // Ideally we have access to a SQL server on the LAN but if 
-            // that fails we fall back to a WebAPI server:
+            // Make some calls to UsersService which we have mocked up to simulate a service that reads/writes to a database.
+            // Two calls are made to this method:  
+            // On the first call we simply show we can make calls to our service.
+            // On the second call we simulate a failure and we fall back to a mocked WebAPI client.
 
-            User user = GetAUser(1);
-            SaveAUser(user);
-        }
-
-        private User GetAUser(int id)
-        {
-            User user = client.Try(x => x.GetUserByID(id));
+            User user = client.Try(usersService => usersService.GetUserByID(1));  // An error here is expected on the second call as we are simulating an error connecting to a server.  Click "Continue" in Visual Studio IDE.
             Console.WriteLine($"User {user.Name} was found.  EndPoint used was {client.CurrentEndPoint.Name}.");
-            return user;
-        }
 
-        private void SaveAUser(User user)
-        {
-            client.Try(x => x.SaveUser(user));
+            client.Try(usersService => usersService.SaveUser(user));
             Console.WriteLine($"User {user.Name} was saved.  EndPoint used was {client.CurrentEndPoint.Name}.");
         }
     }
