@@ -26,7 +26,9 @@ namespace AdaptiveClient.ConsoleDemo
             // Second call we show we can make calls to a service that reads/writes a MySQL database.
             // Third call we simulate a failure and we fall back to a mocked WebAPI client.
 
-            User user = client.Try(usersService => usersService.GetUserByID(1));  // An error here is expected on the second call as we are simulating an error connecting to a server.  Click "Continue" in Visual Studio IDE.
+
+            // An error here is expected on the web api call as we are simulating an error connecting to a server.  Click "Continue" in Visual Studio IDE.
+            User user = client.Try(usersService => usersService.GetUserByID(1));  
             Console.WriteLine($"User {user.Name} was found.  EndPoint used was {client.CurrentEndPoint.Name}.");
 
             client.Try(usersService => usersService.SaveUser(user));
