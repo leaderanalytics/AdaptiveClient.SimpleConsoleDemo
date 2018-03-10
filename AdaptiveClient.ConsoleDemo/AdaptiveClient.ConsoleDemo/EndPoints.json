@@ -6,6 +6,7 @@
       "API_Name": "UsersAPI",
       "Preference": "10",
       "EndPointType": "InProcess",
+      "ProviderName": "MSSQL",
       "ConnectionString": "Data Source=AintGonnaHappen\\SQLEXPRESS;Initial Catalog=AdaptiveClientDemo;Integrated Security=True;MultipleActiveResultSets=True"
     },
 
@@ -15,6 +16,7 @@
       "API_Name": "UsersAPI",
       "Preference": "20",
       "EndPointType": "InProcess",
+      "ProviderName": "MSSQL",
       "ConnectionString": "Data Source=.\\SQLEXPRESS;Initial Catalog=AdaptiveClientDemo;Integrated Security=True;MultipleActiveResultSets=True"
     },
 
@@ -24,6 +26,7 @@
       "API_Name": "UsersAPI",
       "Preference": "30",
       "EndPointType": "HTTP",
+      "ProviderName": "",
       "ConnectionString": "http://localhost:61426/api/"
     },
 
@@ -33,7 +36,18 @@
       "API_Name": "UsersAPI",
       "Preference": "40",
       "EndPointType": "WCF",
+      "ProviderName": "",
       "ConnectionString": "http://localhost:61401/"
+    },
+
+    {
+      "Name": "Prod_MySQL_01",
+      "IsActive": "true",
+      "API_Name": "UsersAPI",
+      "Preference": "20",
+      "EndPointType": "InProcess",
+      "ProviderName": "MySQL",
+      "ConnectionString": "Server=localhost;Database=AdaptiveClientDemo"
     }
   ]
 }

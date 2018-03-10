@@ -9,16 +9,16 @@ namespace AdaptiveClient.ConsoleDemo
     // Here we inject a single service, UsersService, as is shown in the constructor below.
     // However we can also inject a facade or manifest that will give us easy access to hundreds of services.
     // 
-    public class Demo
+    public class DemoController
     {
         private IAdaptiveClient<IUsersService> client;
 
-        public Demo(IAdaptiveClient<IUsersService> client)
+        public DemoController(IAdaptiveClient<IUsersService> client)
         {
             this.client = client;
         }
 
-        public void Run()
+        public void Run() // In a real app this method might be called by a Get or Post
         {
             // Make some calls to UsersService which we have mocked up to simulate a service that reads/writes to a database.
             // Two calls are made to this method:  

@@ -4,21 +4,21 @@ using System.Text;
 
 namespace AdaptiveClient.ConsoleDemo
 {
-    public class UsersWebAPIClient : IUsersService
+    class UsersService_MySQL : IUsersService
     {
         public void SaveUser(User user)
         {
-            // httpClient.PostAsync(...)
+           // call database client here and insert....
         }
 
         public User GetUserByID(int id)
         {
-            // httpClient.GetStringAsync(...)
-            return new User { ID = id, Name = "Bob (retrieved from Web API call)" };
+            // call database client here and select...
+            return new User { ID = id, Name = "Bob (retrieved from MySQL)" };
         }
 
         #region IDisposable
-        private bool disposed = false;
+        private bool disposed = false; 
 
         protected virtual void Dispose(bool disposing)
         {

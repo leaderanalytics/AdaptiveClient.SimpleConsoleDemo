@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AdaptiveClient.ConsoleDemo
 {
-    class UsersService : IUsersService
+    class UsersService_MSSQL : IUsersService
     {
         public void SaveUser(User user)
         {
@@ -14,7 +14,7 @@ namespace AdaptiveClient.ConsoleDemo
         public User GetUserByID(int id)
         {
             // call database client here and select...
-            return new User { ID = id, Name = "Bob" };
+            return new User { ID = id, Name = "Bob (retrieved from MSSQL)" };
         }
 
         #region IDisposable
