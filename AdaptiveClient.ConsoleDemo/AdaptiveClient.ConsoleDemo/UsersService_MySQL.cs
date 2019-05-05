@@ -16,22 +16,5 @@ namespace AdaptiveClient.ConsoleDemo
             // call database client here and select...
             return new User { ID = id, Name = "Bob (retrieved from MySQL)" };
         }
-
-        #region IDisposable
-        private bool disposed = false; 
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!disposed)
-            {
-                disposed = true;
-            }
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-        }
-        #endregion
     }
 }
