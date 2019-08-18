@@ -1,8 +1,10 @@
 # AdaptiveClient.SimpleConsoleDemo
-Demonstration of how to use AdaptiveClient using a simple console application.
+A simple console application that demonstrates the basic concepts of AdaptiveClient.
+
+See the [Zamagon Demo](https://github.com/leaderanalytics/AdaptiveClient.EntityFramework.Zamagon) for an example of working Web and desktop applications.
 
 ---
 
-#### [Read up on AdaptiveClient here](https://github.com/leaderanalytics/AdaptiveClient)
+#### [AdaptiveClient](https://github.com/leaderanalytics/AdaptiveClient)
 
 ---

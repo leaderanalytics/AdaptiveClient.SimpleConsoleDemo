@@ -6,7 +6,6 @@ namespace AdaptiveClient.ConsoleDemo
 {
     public interface IUsersService 
     {
-        void SaveUser(User user);
         User GetUserByID(int id);
     }
 }

@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptiveClient.ConsoleDemo", "AdaptiveClient.ConsoleDemo\AdaptiveClient.ConsoleDemo.csproj", "{CBAC87B6-7ACA-4702-ADED-7EF69A91915F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5D551C2F-08C7-4054-9844-3376B22B6FEE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{03B14551-9118-4190-9018-E715A3D04FBC}"
 	ProjectSection(SolutionItems) = preProject
-		..\README.md = ..\README.md
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global

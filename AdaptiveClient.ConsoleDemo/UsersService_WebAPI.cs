@@ -4,13 +4,8 @@ using System.Text;
 
 namespace AdaptiveClient.ConsoleDemo
 {
-    public class UsersWebAPIClient : IUsersService
+    public class UsersService_WebAPI : IUsersService
     {
-        public void SaveUser(User user)
-        {
-            // httpClient.PostAsync(...)
-        }
-
         public User GetUserByID(int id)
         {
             // httpClient.GetStringAsync(...)
