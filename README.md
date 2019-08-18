@@ -8,3 +8,7 @@ See the [Zamagon Demo](https://github.com/leaderanalytics/AdaptiveClient.EntityF
 #### [AdaptiveClient](https://github.com/leaderanalytics/AdaptiveClient)
 
 ---
+
+---
+
+
