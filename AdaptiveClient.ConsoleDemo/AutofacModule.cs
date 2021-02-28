@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.IO;
 using Autofac;
-using Moq;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using LeaderAnalytics.AdaptiveClient;
 
 namespace AdaptiveClient.ConsoleDemo
@@ -17,7 +10,7 @@ namespace AdaptiveClient.ConsoleDemo
     // specific services.  In this demo specific implementations 
     // of IUsersService are linked to individual EndPoints.
     // See the "Register services" comment below.
-    // These keys are also used by EndPoints defined in EndPoints.json.
+    // These keys are also used by EndPoints defined in appsettings.json.
     // ------------------------------------------------------------
 
     public static class DataProvider
@@ -38,14 +31,14 @@ namespace AdaptiveClient.ConsoleDemo
         public const string HTTP = "HTTP";
     }
 
-    public class AutofacHelper
+    public class AutofacModule
     {
         public static void RegisterComponents(ContainerBuilder builder)
         {
             RegistrationHelper registrationHelper = new RegistrationHelper(builder);
 
             // Register endPoints before registering clients
-            registrationHelper.RegisterEndPoints(EndPointUtilities.LoadEndPoints("EndPoints.json"));
+            registrationHelper.RegisterEndPoints(EndPointUtilities.LoadEndPoints("appsettings.json"));
 
             // Register services
             registrationHelper.RegisterService<UsersService_WebAPI, IUsersService>(EndPointType.HTTP, API_Name.UsersAPI, DataProvider.WebAPI);

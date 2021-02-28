@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using Autofac;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Moq;
 using LeaderAnalytics.AdaptiveClient;
 using System.Linq;
 
@@ -14,9 +10,9 @@ namespace AdaptiveClient.ConsoleDemo
     {
         static void Main(string[] args)
         {
-            List<IEndPointConfiguration> endPoints = EndPointUtilities.LoadEndPoints("EndPoints.json").ToList();
+            List<IEndPointConfiguration> endPoints = EndPointUtilities.LoadEndPoints("appsettings.json").ToList();
             ContainerBuilder builder = new ContainerBuilder();
-            AutofacHelper.RegisterComponents(builder);
+            AutofacModule.RegisterComponents(builder);
             IContainer container = builder.Build();
             Console.Clear();
             DisplayIntro();
@@ -44,7 +40,7 @@ namespace AdaptiveClient.ConsoleDemo
                 Demo demo = container.Resolve<Demo>();
 
 
-                demo.DisplayUserName(endPoints[index]);
+                demo.DisplayUserName(ep);
             }
 
             Console.WriteLine("Adaptive Client demo ended.");

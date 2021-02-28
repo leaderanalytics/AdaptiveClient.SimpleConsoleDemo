@@ -2,18 +2,16 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AdaptiveClient" Version="1.0.0" />
-    <PackageReference Include="Autofac" Version="4.9.4" />
-    <PackageReference Include="Moq" Version="4.12.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="AdaptiveClient" Version="2.0.0" />
+    <PackageReference Include="Autofac" Version="6.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="EndPoints.json">
+    <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

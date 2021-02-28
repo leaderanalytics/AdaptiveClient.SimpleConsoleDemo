@@ -6,8 +6,6 @@ using LeaderAnalytics.AdaptiveClient;
 namespace AdaptiveClient.ConsoleDemo
 {
     // In a real application this Demo class would most likely be a Controller or a ViewModel.
-    // Here we inject a single service, UsersService, as is shown in the constructor below.
-    // However we can also inject a facade or manifest that will give us access to hundreds of services.
 
     public class Demo
     {
