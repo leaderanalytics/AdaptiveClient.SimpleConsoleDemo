@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace AdaptiveClient.ConsoleDemo;
 
-namespace AdaptiveClient.ConsoleDemo
+public interface IUsersService
 {
-    public interface IUsersService 
-    {
-        User GetUserByID(int id);
-    }
+    User GetUserByID(int id);
 }

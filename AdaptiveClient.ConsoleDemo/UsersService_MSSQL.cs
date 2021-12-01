@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace AdaptiveClient.ConsoleDemo;
 
-namespace AdaptiveClient.ConsoleDemo
+class UsersService_MSSQL : IUsersService
 {
-    class UsersService_MSSQL : IUsersService
+    public User GetUserByID(int id)
     {
-        public User GetUserByID(int id)
-        {
-            // call database client here and select using MSSQL specific SQL...
-            return new User { ID = id, Name = "Bob (retrieved from MSSQL)" };
-        }
+        // call database client here and select using MSSQL specific SQL...
+        return new User { ID = id, Name = "Bob (retrieved from MSSQL)" };
     }
 }

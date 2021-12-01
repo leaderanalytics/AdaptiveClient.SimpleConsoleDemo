@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace AdaptiveClient.ConsoleDemo;
 
-namespace AdaptiveClient.ConsoleDemo
+class UsersService_MySQL : IUsersService
 {
-    class UsersService_MySQL : IUsersService
+    public User GetUserByID(int id)
     {
-        public User GetUserByID(int id)
-        {
-            // call database client here and select using MySQL specific SQL...
-            return new User { ID = id, Name = "Bob (retrieved from MySQL)" };
-        }
+        // call database client here and select using MySQL specific SQL...
+        return new User { ID = id, Name = "Bob (retrieved from MySQL)" };
     }
 }
