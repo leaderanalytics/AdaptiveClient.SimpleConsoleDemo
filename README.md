@@ -6,7 +6,7 @@ See the [Zamagon Demo](https://github.com/leaderanalytics/AdaptiveClient.EntityF
 ---
 
 ### Change log
-
+2024-11-30 v3.0.0 - LeaderAnalytics.AdaptiveClient 5.0.1
 2021-02-07 v2.0.0 - AdaptiveClient 2.0. 
 
 ---
